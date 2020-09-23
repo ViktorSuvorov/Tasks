@@ -31,3 +31,20 @@ function matrix(N) {
 }
 
 console.log(matrix(3));
+
+// the Fibonacci sequence.
+
+//Task 2;
+
+function myFlat(something) {
+  return something.reduce(
+    (result, value) =>
+      Array.isArray(value)
+        ? result.concat(myFlat(value))
+        : result.concat(value),
+    []
+  );
+}
+
+let a = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+console.log(myFlat(a));
