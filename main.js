@@ -2,8 +2,10 @@
 
 function matrix(N) {
   let myMatrix = [],
-    rows = columns = 0,
+    rows = (columns = 0),
     steps = N - 1;
+
+  if (typeof N !== "number" || N === 0) alert("Please enter a number");
 
   for (let i = 0; i < N; i++) myMatrix[i] = [];
 
@@ -28,4 +30,4 @@ function matrix(N) {
   return myMatrix;
 }
 
-console.log(matrix(8));
+console.log(matrix(3));
