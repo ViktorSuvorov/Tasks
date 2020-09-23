@@ -34,6 +34,31 @@ console.log(matrix(3));
 
 // the Fibonacci sequence.
 
+function res(length) {
+  let array = [0, 1];
+  switch (length) {
+    case (0): 
+      return array = []
+    case (1): 
+      return array = [0]
+    case (2): 
+      return array
+  }
+  function fib(prev = 0, curr = 1) {
+    let check = prev + curr;
+    array.push(check);
+    if (array.length === length) {
+      return null
+    }
+    return fib(curr, check)
+  }
+  fib();
+  return(array)
+}
+
+console.log(res(4));
+
+
 //Task 2;
 
 function myFlat(something) {
