@@ -56,7 +56,42 @@ function res(length) {
   return(array)
 }
 
+
 console.log(res(4));
+
+// new Fibo
+
+function fib(length, prevArray) {
+  let array = prevArray;
+  if (prevArray === undefined) {
+  array = [0,1];
+  }
+  
+  switch (length) {
+  case (0):
+  return array = []
+  case (1):
+  return array = [0]
+  case (2):
+  return array
+  }
+  
+  const check = array[array.length - 1] + array[array.length - 2];
+  array.push(check);
+  
+  if (array.length === length) {
+  return array;
+  }
+  
+  return fib(length, array)
+  }
+  
+  let result = fib(7);
+  console.log('Result: ', result);
+
+
+
+
 
 
 //Task 2;
